@@ -102,7 +102,7 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --cm-red: #de7474!important;
     --cm-search-background: rgba(24,29,32,1)!important;
     --cm-selection: #353b48!important;
-    --in-content-box-background: var(--tone-6)!important;
+    --in-content-box-background: var(--almost-black)!important;
     --in-content-box-background-odd: #f3f6fa;
     --in-content-box-background-hover: var(--accent-1)!important;
     --in-content-box-background-active: var(--tone-6)!important;
@@ -135,7 +135,7 @@ regexp(".*\\.(p|P)(d|D)(f|F).*") {
     --in-content-primary-button-background-active: var(--accent-3)!important;
     --in-content-selected-text: var(--tone-1)!important;
     --in-content-selected-text-background: #5675b9;
-    --in-content-table-border-dark-color: var(--tone-7)!important;
+    --in-content-table-border-dark-color: var(--almost-black)!important;
     --in-content-table-header-background: var(--accent-2)!important;
     --in-content-text-color: var(--tone-3)!important;
     --secure-connection-color: var(--accent-1);
@@ -231,6 +231,7 @@ screen and (-moz-os-version:windows-win10) {
   #context-sep-navigation {
     padding: 0px !important
   }
+  /*BOOKMARKS MENU*/
   #BMB_bookmarksPopup menupopup {
     padding: 4px 0 0!important
   }
@@ -269,6 +270,7 @@ screen and (-moz-os-version:windows-win10) {
   }
   menupopup,
   menupopup > menu > menupopup {
+    max-width: 50em !important;
     padding: 4px 0!important
   }
   #customization-toolbar-menu,
@@ -815,7 +817,7 @@ url(chrome://browser/content/places/bookmarkProperties2.xul) {
   background: var(--almost-black)!important
 }
 #BMB_bookmarksPopup .popup-internal-box {
-  background-color: var(--almost-black)!important
+  background-color: var(--steel-blue)!important
 }
 .popup-internal-box > autorepeatbutton {
   -moz-appearance: none!important;
@@ -856,6 +858,14 @@ photonpanelmultiview panelview {
 #BMB_bookmarksPopup {
   background: var(--almost-black)!important
 }
+/* Change The Color Of The Padlock On The Address Bar */
+#connection-icon {fill: #0183e5 !important;}
+#identity-box.verifiedIdentity #identity-icon-labels {color: #0183e5 !important;}
+#identity-box.verifiedIdentity { --urlbar-separator-color: #0183e5 !important;}
+.identity-popup-connection-secure {color: #fff !important;}
+#identity-popup[connection^=secure] #identity-popup-securityView
+{fill: #0183e5 !important;}
+
 #identity-popup-securityView {
   background: var(--almost-black)!important
 }
@@ -863,7 +873,7 @@ photonpanelmultiview panelview {
   background: var(--almost-black)!important
 }
 .identity-popup-expander[panel-multiview-anchor] {
-  background-color: var(--in-content-primary-button-background)!important;
+  background-color: var(--almost-black)!important;
   fill: var(--in-content-text-color)!important
 }
 #identity-popup-mainView {
@@ -871,17 +881,17 @@ photonpanelmultiview panelview {
   color: var(--white)!important
 }
 #identity-popup[connection^=secure] .identity-popup-security-content {
-  fill: var(--in-content-category-text-selected)!important
+  fill: var(--almost-black)!important
 }
 
 .identity-popup-expander {
-  border-color: var(--in-content-box-border-color)!important;
-  background-color: var(--in-content-box-background)!important;
+  border-color: var(--almost-black)!important;
+  background-color: var(--almost-black)!important;
   fill: var(--almost-black)!important
 }
 .popup-notification-button[default][highlight=true]:not([disabled]) {
-  background-color: var(--in-content-primary-button-background)!important;
-  color: var(--in-content-text-color)
+  background-color: var(--almost-black)!important;
+  color: var(--white)
 }
 #update-available-whats-new,
 .text-link {
@@ -890,7 +900,7 @@ photonpanelmultiview panelview {
 .popup-notification-icon[popupid=update-available],
 .popup-notification-icon[popupid=update-manual],
 .popup-notification-icon[popupid=update-restart] {
-  background-color: var(--in-content-item-selected)!important;
+  background-color: var(--almost-black)!important;
   border-radius: 50%
 }
 toolbarbutton {
@@ -1064,11 +1074,11 @@ toolbarseparator {
   }
   .windowDialog,
   textbox {
-    color: var(--in-content-page-color)!important
+    color: var(--almost-black)!important
   }
   textbox[type=search] {
     -moz-appearance: none!important;
-    background-color: var(--in-content-box-background)!important;
+    background-color: var(--almost-black)!important;
     border: 1px solid;
     border-color: var(--in-content-box-border-color)!important;
     border-radius: 3px!important;
@@ -1141,17 +1151,17 @@ toolbarseparator {
     -moz-appearance: none!important;
     background-color: var(--almost-black)!important;
     border: 1px solid;
-    border-color: var(--in-content-box-border-color)!important;
+    border-color: var(--almost-black)!important;
     border-radius: 3px!important;
     padding: 2px 4px 2px 2px!important
   }
   button {
     -moz-appearance: none!important;
-    background-color: var(--in-content-page-background)!important;
+    background-color: var(--almost-black)!important;
     border: 1px solid!important;
     border-radius: 3px!important;
     color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important
+    border-color: var(--almost-black)!important
   }
   button:hover {
     background-color: var(--accent-1)!important
@@ -1160,12 +1170,12 @@ toolbarseparator {
 @-moz-document url-prefix(chrome://pippki/content/exceptionDialog) {
   #exceptiondialog {
     -moz-appearance: none!important;
-    background-color: var(--tone-8)!important
+    background-color: var(--almost-black)!important
   }
   textbox {
     -moz-appearance: none!important;
     min-height: 20px!important;
-    background: var(--in-content-box-background)!important;
+    background: var(--almost-black)!important;
     border: 1px solid var(--in-content-box-border-color);
     padding: 1px
   }
@@ -1173,24 +1183,26 @@ toolbarseparator {
 #navigator-toolbox::after {
   border-bottom: 0!important
 }
-#browser vbox#appcontent tabbrowser,
-#content,
-#tabbrowser-tabpanels,
+/*DARK BACKGROUND WHEN PRELOADING URLs*/
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels,
 browser[type=content-primary],
 browser[type=content] > html {
-  background: var(--almost-black)!important
+  background: var(--almost-black)!important;
+  background-color: #000 !important;
+  color: #000 !important;
 }
 #identity-box.verifiedIdentity {
-  --urlbar-separator-color: var(--secure-connection-color)!important
+  --urlbar-separator-color: var(--almost-black)!important
 }
 #identity-box.verifiedIdentity #identity-icon-labels,
-.identity-popup-connection-secure {
-  color: var(--secure-connection-color)!important
+.identity-popup-connection-secure, #identity-popup-multiView {
+  background-color: var(--almost-black)!important;
+  color: var(--white) !important;
 }
 #connection-icon,
 #identity-popup[connection^=secure] #identity-popup-security-content,
 #identity-popup[connection^=secure] #identity-popup-securityView {
-  fill: var(--secure-connection-color)!important
+  fill: var(--almost-black)!important
 }
 #sidebar-header,
 #sidebar-search-container,
@@ -1304,6 +1316,10 @@ statuspanel .statuspanel-label {
   margin-top: 10px;
   margin: 0px 10px !important;
 }
+/*Sheild in the URL bar*/
+#tracking-protection-icon-container {
+  fill: red !important;
+  border: 1px solid transparent!important; }
 /* ### Tabs ### */
 /* Hide tab label and close button when it's not the active tab */
 .tabbrowser-tab:not([selected="true"]) .tab-label-container,
@@ -1421,15 +1437,6 @@ toolbar toolbarbutton {
 menubar, toolbar, nav-bar, #TabsToolbar, #Personal > *{
   background-color: var(--almost-black) !important;
 }
-/* Change The Color Of The Padlock On The Address Bar */
-#connection-icon {fill: #0183e5 !important;}
-#identity-box.verifiedIdentity #identity-icon-labels {color: #0183e5 !important;}
-#identity-box.verifiedIdentity { --urlbar-separator-color: #0183e5 !important;}
-.identity-popup-connection-secure {color: #0183e5 !important;}
-#identity-popup[connection^=secure] #identity-popup-securityView,
-#identity-popup[connection^=secure] #identity-popup-security-content
-{fill: #0183e5 !important;}
-
 /* Recreates the basic functionality of the popular Roomy Bookmarks Toolbar add-on:
 Hide bookmarks bar items label text. */
 .bookmark-item > .toolbarbutton-text {
@@ -1449,7 +1456,7 @@ margin-bottom: -4px !important;
 .titlebar-spacer[type="pre-tabs"],
 .titlebar-spacer[type="post-tabs"]
 {
-	display: none !important;
+  display: none !important;
 }
 /* Remove empty space before first tab
 Delete this rule if you need a space to drag the window*/
@@ -1489,27 +1496,34 @@ display: none !important;}
 /* Remove white flash before page load */
 @-moz-document url-prefix(about:), url-prefix(chrome://browser) {
     browser[type="content"], tabpanels {
-		background: #1a1a1a !important;
-	}
+    background: #1a1a1a !important;
+  }
 }
 /* Hide "Bookmark Tabs" on tab context menu */
 
 #context_bookmarkTab {
-
-display: none !important;
-
+  display: none !important;
 }
 /* Remove "Send Page to Device", "Send Link to Device" */
-
 #context-sendpagetodevice, #context-sep-sendpagetodevice,
 #context-sendlinktodevice, #context-sep-sendlinktodevice,
 #context_sendTabToDevice, #context_sendTabToDevice_separator {
   display: none !important;
 }
-toolbarbutton#alltabs-button {
-    -moz-binding: url(data:text/plain;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+DQo8IS0tIENvcHlyaWdodCAoYykgMjAxNyBIYWdnYWkgTnVjaGkNCkF2YWlsYWJsZSBmb3IgdXNlIHVuZGVyIHRoZSBNSVQgTGljZW5zZToNCmh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUDQogLS0+DQoNCjwhLS0gUnVuIHVzZXJDaHJvbWUuanMvdXNlckNocm9tZS54dWwgYW5kIC51Yy5qcy8udWMueHVsLy5jc3MgZmlsZXMgIC0tPg0KPGJpbmRpbmdzIHhtbG5zPSJodHRwOi8vd3d3Lm1vemlsbGEub3JnL3hibCI+DQogICAgPGJpbmRpbmcgaWQ9ImpzIj4NCiAgICAgICAgPGltcGxlbWVudGF0aW9uPg0KICAgICAgICAgICAgPGNvbnN0cnVjdG9yPjwhW0NEQVRBWw0KICAgICAgICAgICAgICAgIGlmKHdpbmRvdy51c2VyQ2hyb21lSnNNb2QpIHJldHVybjsNCiAgICAgICAgICAgICAgICB3aW5kb3cudXNlckNocm9tZUpzTW9kID0gdHJ1ZTsNCg0KICAgICAgICAgICAgICAgIHZhciBjaHJvbWVGaWxlcyA9IEZpbGVVdGlscy5nZXREaXIoIlVDaHJtIiwgW10pLmRpcmVjdG9yeUVudHJpZXM7DQogICAgICAgICAgICAgICAgdmFyIHh1bEZpbGVzID0gW107DQogICAgICAgICAgICAgICAgdmFyIHNzcyA9IENjWydAbW96aWxsYS5vcmcvY29udGVudC9zdHlsZS1zaGVldC1zZXJ2aWNlOzEnXS5nZXRTZXJ2aWNlKENpLm5zSVN0eWxlU2hlZXRTZXJ2aWNlKTsNCg0KICAgICAgICAgICAgICAgIHdoaWxlKGNocm9tZUZpbGVzLmhhc01vcmVFbGVtZW50cygpKSB7DQogICAgICAgICAgICAgICAgICAgIHZhciBmaWxlID0gY2hyb21lRmlsZXMuZ2V0TmV4dCgpLlF1ZXJ5SW50ZXJmYWNlKENpLm5zSUZpbGUpOw0KICAgICAgICAgICAgICAgICAgICB2YXIgZmlsZVVSSSA9IFNlcnZpY2VzLmlvLm5ld0ZpbGVVUkkoZmlsZSk7DQoNCiAgICAgICAgICAgICAgICAgICAgaWYoZmlsZS5pc0ZpbGUoKSkgew0KICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJub25lIjsNCiAgICAgICAgICAgICAgICAgICAgICAgIGlmKC8oXnVzZXJDaHJvbWV8LnVjKS5qcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2VyY2hyb21lL2pzIjsNCiAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYoLyhedXNlckNocm9tZXwudWMpLnh1bCQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2VyY2hyb21lL3h1bCI7DQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGlmKC8uYXMuY3NzJC9pLnRlc3QoZmlsZS5sZWFmTmFtZSkpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlID0gImFnZW50c2hlZXQiOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZigvXig/ISh1c2VyQ2hyb21lfHVzZXJDb250ZW50KS5jc3MkKS4rLmNzcyQvaS50ZXN0KGZpbGUubGVhZk5hbWUpKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJ1c2Vyc2hlZXQiOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgaWYodHlwZSAhPSAibm9uZSIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygiLS0tLS0tLS0tLVwgIiArIGZpbGUubGVhZk5hbWUgKyAiICgiICsgdHlwZSArICIpIik7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdHJ5IHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYodHlwZSA9PSAidXNlcmNocm9tZS9qcyIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFNlcnZpY2VzLnNjcmlwdGxvYWRlci5sb2FkU3ViU2NyaXB0V2l0aE9wdGlvbnMoZmlsZVVSSS5zcGVjLCB7dGFyZ2V0OiB3aW5kb3csIGlnbm9yZUNhY2hlOiB0cnVlfSk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzZSBpZih0eXBlID09ICJ1c2VyY2hyb21lL3h1bCIpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHh1bEZpbGVzLnB1c2goZmlsZVVSSS5zcGVjKTsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlIGlmKHR5cGUgPT0gImFnZW50c2hlZXQiKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZighc3NzLnNoZWV0UmVnaXN0ZXJlZChmaWxlVVJJLCBzc3MuQUdFTlRfU0hFRVQpKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNzcy5sb2FkQW5kUmVnaXN0ZXJTaGVldChmaWxlVVJJLCBzc3MuQUdFTlRfU0hFRVQpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2UgaWYodHlwZSA9PSAidXNlcnNoZWV0Iikgew0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYoIXNzcy5zaGVldFJlZ2lzdGVyZWQoZmlsZVVSSSwgc3NzLlVTRVJfU0hFRVQpKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNzcy5sb2FkQW5kUmVnaXN0ZXJTaGVldChmaWxlVVJJLCBzc3MuVVNFUl9TSEVFVCk7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9IGNhdGNoKGUpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS5sb2coIiMjIyMjIyMjIyMgRVJST1I6ICIgKyBlICsgIiBhdCAiICsgZS5saW5lTnVtYmVyICsgIjoiICsgZS5jb2x1bW5OdW1iZXIpOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zb2xlLmxvZygiLS0tLS0tLS0tLS8gIiArIGZpbGUubGVhZk5hbWUpOw0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KDQogICAgICAgICAgICAgICAgc2V0VGltZW91dChmdW5jdGlvbiBsb2FkWFVMKCkgew0KICAgICAgICAgICAgICAgICAgICBpZih4dWxGaWxlcy5sZW5ndGggPiAwKSB7DQogICAgICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5sb2FkT3ZlcmxheSh4dWxGaWxlcy5zaGlmdCgpLCBudWxsKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIHNldFRpbWVvdXQobG9hZFhVTCwgNSk7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICB9LCAwKTsNCiAgICAgICAgICAgIF1dPjwvY29uc3RydWN0b3I+DQogICAgICAgIDwvaW1wbGVtZW50YXRpb24+DQogICAgPC9iaW5kaW5nPg0KPC9iaW5kaW5ncz4=);
+#userContext-icons {
+  display: none !important;
+}
+/*Remove from Hamburger Menu*/
+#appMenu-addons-button,
+#appMenu-fxa-status,#appMenu-new-window-button,
+#appMenu-private-window-button, #appMenu-options-button,
+#appMenu-open-file-button, #appMenu-more-button,
+#appMenu-save-file-button, #appMenu-print-button,
+#appMenu-find-button, #appMenu-customize-button, #appMenu-preferences-button {
+  display: none !important;
 }
 
+  
 /****THIS IS FOR HAMBURGER SUB MENU HIGHLIGHTING****/
 .subviewbutton:hover {
   background-color: var(--accent-1) !important;
@@ -1521,5 +1535,12 @@ toolbarbutton#alltabs-button {
 
 --toolbarbutton-fill-attention {
   background-color: var(--almost-black) !important
+}
+@-moz-document url(about:preferences), url(about:profiles) {
+  html|html, xul|page, xul|window {
+    --in-content-page-background: #000 !important;
+    background-color: rgba(0,0,0, 0.0) !important;
+    background-size: 100% !important;
+  }
 }
 }
